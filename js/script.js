@@ -32,4 +32,4 @@ if (userAge < 18) {
 }
 
 // L'output del prezzo finale va scritto in pagina in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
-
+document.getElementById('output').innerHTML = 'The final price is:' + priceDiscounted ;
