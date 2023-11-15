@@ -4,7 +4,7 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
 va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va scritto in pagina in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
-Questo richiederà un minimo di ricerca. */
+ */
 
 
 // Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
@@ -22,10 +22,14 @@ console.log ('Price standard is:',priceStandard,'€');
 let priceDiscounted;
 if (userAge < 18) {
     priceDiscounted = priceStandard - ((priceStandard / 100) * 20);
-    console.log ('There is 20% of discount, so the final price is:', priceDiscounted)
-} else if (userAge >= 65) {
+    console.log ('There is 20% of discount, so the final price is:', priceDiscounted);
+  //va applicato uno sconto del 40% per gli over 65.
+} else if (userAge >= 65) { 
     priceDiscounted = priceStandard - ((priceStandard / 100) * 40);
-    console.log ('There is 60% of discount, so the final price is:', priceDiscounted)
+    console.log ('There is 40% of discount, so the final price is:', priceDiscounted);
 } else {
     console.log ('There is no discount');
 }
+
+// L'output del prezzo finale va scritto in pagina in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
+
