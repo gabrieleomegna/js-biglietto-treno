@@ -15,5 +15,17 @@ console.log ('The distance is:', userDistance);
 console.log ('Your age is:', userAge);
 
 //il prezzo del biglietto è definito in base ai km (0.21 € al km)
-let priceStandard = 0.21 * userDistance;
+const priceStandard = 0.21 * userDistance;
 console.log ('Price standard is:',priceStandard,'€');
+
+//va applicato uno sconto del 20% per i minorenni
+let priceDiscounted;
+if (userAge < 18) {
+    priceDiscounted = priceStandard - ((priceStandard / 100) * 20);
+    console.log ('There is 20% of discount, so the final price is:', priceDiscounted)
+} else if (userAge >= 65) {
+    priceDiscounted = priceStandard - ((priceStandard / 100) * 40);
+    console.log ('There is 60% of discount, so the final price is:', priceDiscounted)
+} else {
+    console.log ('There is no discount');
+}
